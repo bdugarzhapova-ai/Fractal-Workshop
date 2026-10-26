@@ -1,5 +1,6 @@
 import turtle
 
+turtle.left(90)
 def draw_binary_tree(order, size, angle):
     if order == 0:
         return
