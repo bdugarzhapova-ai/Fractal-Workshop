@@ -28,7 +28,7 @@ def draw_binary_tree(order, size, angle):
     turtle.backward(size)
 
 turtle.left(90)
-def draw(size, order):
+def draw_branch(size, order):
     if order == 0:
         turtle.left(180)
         return
@@ -37,9 +37,9 @@ def draw(size, order):
     for i in range(order):
         turtle.forward(x)
         turtle.left(45)
-        draw(0.5 * x * (order - i - 1), order - i - 1)
+        draw_branch(0.5 * x * (order - i - 1), order - i - 1)
         turtle.left(90)
-        draw(0.5 * x * (order - i - 1), order - i - 1)
+        draw_branch(0.5 * x * (order - i - 1), order - i - 1)
         turtle.right(135)
 
     turtle.forward(x)
