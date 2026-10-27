@@ -34,9 +34,25 @@ def main():
 
         try:
             if choice == '1':
-                basic.draw_binary_tree(int(input("Глубина: ")), int(input("Размер: ")), int(input("Угол: ")))
+                order = int(input("Порядок: "))
+                size = int(input("Размер: "))
+                angle = int(input("Угол: "))
+
+                turtle.up()
+                turtle.setheading(90)
+                turtle.down()
+
+                basic.draw_binary_tree(order, size, angle)
             elif choice == '2':
-                basic.draw_branch(int(input("Глубина: ")), int(input("Размер: ")))
+                order = int(input("Порядок: "))
+                size = int(input("Размер: "))
+
+                turtle.up()
+                turtle.setheading(90)
+                turtle.down()
+
+                basic.draw(size, order)
+                turtle.up()
             elif choice == '3':
                 koch.koch(int(input("Порядок: ")), int(input("Размер: ")))
             elif choice == '4':
